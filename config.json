@@ -1,0 +1,14 @@
+{
+    "MainWindow": {
+        "auto_login": false,
+        "save_password": false
+    },
+    "User": {
+        "password": "",
+        "user": "admin"
+    },
+    "QFluentWidgets": {
+        "ThemeColor": "#ff4a5ef3",
+        "ThemeMode": "Light"
+    }
+}

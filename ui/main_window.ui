@@ -1,0 +1,1725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>简易PDF工具箱</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resource/resource.qrc">
+    <normaloff>:/resource/images/logo.png</normaloff>:/resource/images/logo.png</iconset>
+  </property>
+  <layout class="QHBoxLayout" name="main_layout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="sizeConstraint">
+    <enum>QLayout::SetDefaultConstraint</enum>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>40</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="PopUpAniStackedWidget" name="stackedWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777213</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_1">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>450</y>
+         <width>691</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="SubtitleLabel" name="SubtitleLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>生成文件路径</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="LineEdit" name="merge_text">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>40</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="PushButton" name="pushButton_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>选择目录</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="PushButton" name="pushButton_1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>生成文件</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>56</y>
+         <width>691</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="PushButton" name="pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>导入文件</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="PushButton" name="pushButton_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>删除文件</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="CardWidget" name="CardWidget">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>98</y>
+         <width>691</width>
+         <height>344</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::HLine</enum>
+       </property>
+       <widget class="TableWidget" name="TableWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>681</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTableView {
+    background: transparent;
+    outline: none;
+    border: none;
+    /* font: 13px 'Segoe UI', 'Microsoft YaHei'; */
+    selection-background-color: transparent;
+    alternate-background-color: transparent;
+}
+
+QTableView[isBorderVisible=true] {
+    border: 1px solid rgb(0, 0, 12);
+}
+
+QTableView::item {
+    background: transparent;
+    border: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 35px;
+}
+
+
+QTableView::indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+
+QHeaderView {
+    background-color: transparent;
+}
+
+QHeaderView::section {
+    background-color: transparent;
+    color: rgb(96, 96, 96);
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid rgba(0, 0, 0, 15);
+    font: 13px 'Segoe UI', 'Microsoft YaHei', 'PingFang SC';
+}
+
+QHeaderView::section:horizontal {
+    border-left: none;
+    height: 33px;
+}
+
+QTableView[isBorderVisible=true] QHeaderView::section:horizontal {
+    border-top: none;
+}
+
+QHeaderView::section:horizontal:last {
+    border-right: none;
+}
+
+QHeaderView::section:vertical {
+    border-top: none;
+}
+
+QHeaderView::section:checked {
+    background-color: transparent;
+}
+
+QHeaderView::down-arrow {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    margin-right: 6px;
+    image: url(:/qfluentwidgets/images/table_view/Down_black.svg);
+}
+
+QHeaderView::up-arrow {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    margin-right: 6px;
+    image: url(:/qfluentwidgets/images/table_view/Up_black.svg);
+}
+
+QTableCornerButton::section {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 15);
+}
+
+QTableCornerButton::section:pressed {
+    background-color: rgba(0, 0, 0, 12);
+}</string>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="rowCount">
+         <number>0</number>
+        </property>
+        <property name="selectRightClickedRow">
+         <bool>false</bool>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>165</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>40</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>源文件名</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>页数</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>文件位置</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>修改时间</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="TitleLabel" name="TitleLabel">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>11</y>
+         <width>112</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>合并文档</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="CardWidget" name="CardWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>711</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>11</y>
+          <width>691</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="SubtitleLabel" name="SubtitleLabel_3">
+           <property name="text">
+            <string>导入源文件</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="LineEdit" name="LineEdit_3"/>
+           </item>
+           <item>
+            <widget class="PushButton" name="pushButton_2">
+             <property name="text">
+              <string>浏览</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="BodyLabel" name="BodyLabel_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>文件总页数：</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::AutoText</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="TitleLabel" name="TitleLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>123</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>拆分文档</string>
+       </property>
+      </widget>
+      <widget class="CardWidget" name="CardWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>210</y>
+         <width>711</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>691</width>
+          <height>73</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="SubtitleLabel" name="SubtitleLabel_4">
+           <property name="text">
+            <string>输出文件路径</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="LineEdit" name="LineEdit_7"/>
+           </item>
+           <item>
+            <widget class="PushButton" name="pushButton_3">
+             <property name="text">
+              <string>浏览</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="CardWidget" name="CardWidget_6">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>320</y>
+         <width>711</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>691</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="SubtitleLabel" name="SubtitleLabel_5">
+             <property name="text">
+              <string>需要拆分的页码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="LineEdit" name="LineEdit_8"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="BodyLabel" name="BodyLabel">
+             <property name="text">
+              <string>格式形如：1-5,7;9-10;8-11,13</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="BodyLabel" name="BodyLabel_2">
+             <property name="text">
+              <string>以分号相隔的部分会被视为两个文件</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="PushButton" name="pushButton_7">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>500</y>
+         <width>131</width>
+         <height>33</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>导出文件</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <widget class="TitleLabel" name="TitleLabel_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>123</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>删除页面</string>
+       </property>
+      </widget>
+      <widget class="PushButton" name="pushButton_9">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>500</y>
+         <width>131</width>
+         <height>33</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>导出文件</string>
+       </property>
+      </widget>
+      <widget class="CardWidget" name="CardWidget_9">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>220</y>
+         <width>711</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>691</width>
+          <height>73</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item>
+          <widget class="SubtitleLabel" name="SubtitleLabel_9">
+           <property name="text">
+            <string>输出文件路径</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="LineEdit" name="LineEdit_11"/>
+           </item>
+           <item>
+            <widget class="PushButton" name="pushButton_6">
+             <property name="text">
+              <string>浏览</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="CardWidget" name="CardWidget_10">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>340</y>
+         <width>711</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget_9">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>691</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_16">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_17">
+           <item>
+            <widget class="SubtitleLabel" name="SubtitleLabel_10">
+             <property name="text">
+              <string>需要删除的页码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <item>
+              <widget class="LineEdit" name="LineEdit_12"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_18">
+           <item>
+            <widget class="BodyLabel" name="BodyLabel_7">
+             <property name="text">
+              <string>格式形如：1-5,7,9-10,13</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="CardWidget" name="CardWidget_11">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>711</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>11</y>
+          <width>691</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_19">
+         <item>
+          <widget class="SubtitleLabel" name="SubtitleLabel_11">
+           <property name="text">
+            <string>导入源文件</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="LineEdit" name="LineEdit_5"/>
+           </item>
+           <item>
+            <widget class="PushButton" name="pushButton_10">
+             <property name="text">
+              <string>浏览</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="BodyLabel" name="BodyLabel_9">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>文件总页数：</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::AutoText</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <widget class="CardWidget" name="CardWidget_12">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>340</y>
+         <width>711</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget_11">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>691</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_20">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="SubtitleLabel" name="SubtitleLabel_12">
+             <property name="text">
+              <string>需要转换的页码</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="LineEdit" name="LineEdit_13"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_22">
+           <item>
+            <widget class="BodyLabel" name="BodyLabel_8">
+             <property name="text">
+              <string>格式形如：1-5,7,9-10,13</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="PushButton" name="pushButton_11">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>500</y>
+         <width>131</width>
+         <height>33</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>导出文件</string>
+       </property>
+      </widget>
+      <widget class="CardWidget" name="CardWidget_13">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>711</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget_12">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>11</y>
+          <width>691</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_23">
+         <item>
+          <widget class="SubtitleLabel" name="SubtitleLabel_13">
+           <property name="text">
+            <string>导入源文件</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_17">
+           <item>
+            <widget class="LineEdit" name="LineEdit_6"/>
+           </item>
+           <item>
+            <widget class="PushButton" name="pushButton_12">
+             <property name="text">
+              <string>浏览</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="BodyLabel" name="BodyLabel_10">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>文件总页数：</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::AutoText</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="TitleLabel" name="TitleLabel_6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>151</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>PDF转图片</string>
+       </property>
+      </widget>
+      <widget class="CardWidget" name="CardWidget_14">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>220</y>
+         <width>711</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget_13">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>691</width>
+          <height>73</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_24">
+         <item>
+          <widget class="SubtitleLabel" name="SubtitleLabel_14">
+           <property name="text">
+            <string>输出文件路径</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <widget class="LineEdit" name="LineEdit_14"/>
+           </item>
+           <item>
+            <widget class="PushButton" name="pushButton_13">
+             <property name="text">
+              <string>浏览</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_5">
+      <widget class="TitleLabel" name="TitleLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>11</y>
+         <width>151</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>图片转PDF</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>450</y>
+         <width>691</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="SubtitleLabel" name="SubtitleLabel_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>生成文件路径</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="LineEdit" name="merge_text_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>40</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="PushButton" name="pushButton_8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>选择目录</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="PushButton" name="pushButton_14">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>生成文件</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>56</y>
+         <width>691</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="PushButton" name="pushButton_15">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>导入图片</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="PushButton" name="pushButton_16">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>删除图片</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="CardWidget" name="CardWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>98</y>
+         <width>691</width>
+         <height>344</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::HLine</enum>
+       </property>
+       <widget class="TableWidget" name="TableWidget_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>681</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTableView {
+    background: transparent;
+    outline: none;
+    border: none;
+    /* font: 13px 'Segoe UI', 'Microsoft YaHei'; */
+    selection-background-color: transparent;
+    alternate-background-color: transparent;
+}
+
+QTableView[isBorderVisible=true] {
+    border: 1px solid rgb(0, 0, 12);
+}
+
+QTableView::item {
+    background: transparent;
+    border: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 35px;
+}
+
+
+QTableView::indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+
+QHeaderView {
+    background-color: transparent;
+}
+
+QHeaderView::section {
+    background-color: transparent;
+    color: rgb(96, 96, 96);
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid rgba(0, 0, 0, 15);
+    font: 13px 'Segoe UI', 'Microsoft YaHei', 'PingFang SC';
+}
+
+QHeaderView::section:horizontal {
+    border-left: none;
+    height: 33px;
+}
+
+QTableView[isBorderVisible=true] QHeaderView::section:horizontal {
+    border-top: none;
+}
+
+QHeaderView::section:horizontal:last {
+    border-right: none;
+}
+
+QHeaderView::section:vertical {
+    border-top: none;
+}
+
+QHeaderView::section:checked {
+    background-color: transparent;
+}
+
+QHeaderView::down-arrow {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    margin-right: 6px;
+    image: url(:/qfluentwidgets/images/table_view/Down_black.svg);
+}
+
+QHeaderView::up-arrow {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    margin-right: 6px;
+    image: url(:/qfluentwidgets/images/table_view/Up_black.svg);
+}
+
+QTableCornerButton::section {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 15);
+}
+
+QTableCornerButton::section:pressed {
+    background-color: rgba(0, 0, 0, 12);
+}</string>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="rowCount">
+         <number>0</number>
+        </property>
+        <property name="selectRightClickedRow">
+         <bool>false</bool>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>165</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>40</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>源文件名</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>尺寸</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>文件位置</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>修改时间</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_6">
+      <widget class="QWidget" name="layoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>454</y>
+         <width>691</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="SubtitleLabel" name="SubtitleLabel_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>生成文件路径</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="LineEdit" name="merge_text_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>40</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="PushButton" name="pushButton_17">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>选择目录</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="PushButton" name="pushButton_18">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>生成文件</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="TitleLabel" name="TitleLabel_4">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>12</y>
+         <width>181</width>
+         <height>38</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>WORD转PDF</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget_6">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>60</y>
+         <width>691</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="PushButton" name="pushButton_19">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>导入文件</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="PushButton" name="pushButton_20">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>删除文件</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="CardWidget" name="CardWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>102</y>
+         <width>691</width>
+         <height>344</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::HLine</enum>
+       </property>
+       <widget class="TableWidget" name="TableWidget_3">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>681</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTableView {
+    background: transparent;
+    outline: none;
+    border: none;
+    /* font: 13px 'Segoe UI', 'Microsoft YaHei'; */
+    selection-background-color: transparent;
+    alternate-background-color: transparent;
+}
+
+QTableView[isBorderVisible=true] {
+    border: 1px solid rgb(0, 0, 12);
+}
+
+QTableView::item {
+    background: transparent;
+    border: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 35px;
+}
+
+
+QTableView::indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+
+QHeaderView {
+    background-color: transparent;
+}
+
+QHeaderView::section {
+    background-color: transparent;
+    color: rgb(96, 96, 96);
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid rgba(0, 0, 0, 15);
+    font: 13px 'Segoe UI', 'Microsoft YaHei', 'PingFang SC';
+}
+
+QHeaderView::section:horizontal {
+    border-left: none;
+    height: 33px;
+}
+
+QTableView[isBorderVisible=true] QHeaderView::section:horizontal {
+    border-top: none;
+}
+
+QHeaderView::section:horizontal:last {
+    border-right: none;
+}
+
+QHeaderView::section:vertical {
+    border-top: none;
+}
+
+QHeaderView::section:checked {
+    background-color: transparent;
+}
+
+QHeaderView::down-arrow {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    margin-right: 6px;
+    image: url(:/qfluentwidgets/images/table_view/Down_black.svg);
+}
+
+QHeaderView::up-arrow {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    margin-right: 6px;
+    image: url(:/qfluentwidgets/images/table_view/Up_black.svg);
+}
+
+QTableCornerButton::section {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 15);
+}
+
+QTableCornerButton::section:pressed {
+    background-color: rgba(0, 0, 0, 12);
+}</string>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="rowCount">
+         <number>0</number>
+        </property>
+        <property name="selectRightClickedRow">
+         <bool>false</bool>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>165</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>40</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>源文件名</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>文件大小</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>文件位置</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>修改时间</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="setting_page">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="setting_layout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PushButton</class>
+   <extends>QPushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>CardWidget</class>
+   <extends>QFrame</extends>
+   <header>qfluentwidgets</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PopUpAniStackedWidget</class>
+   <extends>QStackedWidget</extends>
+   <header>qfluentwidgets</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BodyLabel</class>
+   <extends>QLabel</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>SubtitleLabel</class>
+   <extends>QLabel</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>TitleLabel</class>
+   <extends>QLabel</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>LineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>TableWidget</class>
+   <extends>QTableWidget</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resource/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

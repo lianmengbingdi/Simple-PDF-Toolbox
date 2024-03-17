@@ -1,0 +1,11 @@
+pyqt5
+darkdetect
+loguru
+PyMuPDF
+PyQt-Fluent-Widgets
+PyQt5-Frameless-Window
+pycryptodome
+nuitka
+imageio
+comtypes
+pillow
